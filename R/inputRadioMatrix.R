@@ -34,7 +34,7 @@ generateRadioRow <- function(rowId, minLabel, maxLabel, choiceNames, choiceValue
 
   row_dat <- mapply(choiceNames, choiceValues, FUN = function(name, value){
 
-    inputTag <- shiny::tags$input(type = "radio", name = rowId,
+    inputTag <- shiny::tags$input(type = "checkbox", name = rowId,
                                   title = value, # to provide tooltips with the value
                                   value = value)
     if (value %in% selected)
